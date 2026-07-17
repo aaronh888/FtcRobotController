@@ -8,7 +8,7 @@ public class HelloWorld extends OpMode {
 
     @Override
     public void init() {
-        telemetry.addData("Hello","World");
+        telemetry.addData("Hello","World");  // My First Comment
 
     }
 
@@ -16,4 +16,9 @@ public class HelloWorld extends OpMode {
     public void loop() {
 
     }
+
+    // Single Line Comment
+    /*
+    
+     */
 }
