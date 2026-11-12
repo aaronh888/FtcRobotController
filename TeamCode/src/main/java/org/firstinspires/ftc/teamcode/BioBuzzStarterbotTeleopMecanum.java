@@ -101,13 +101,13 @@ public class BioBuzzStarterbotTeleopMecanum extends OpMode {
          * to 'get' must correspond to the names assigned during the robot configuration
          * step.
          */
-        leftFrontDrive = hardwareMap.get(DcMotor.class, "left_front_drive");
-        rightFrontDrive = hardwareMap.get(DcMotor.class, "right_front_drive");
-        leftBackDrive = hardwareMap.get(DcMotor.class, "left_back_drive");
-        rightBackDrive = hardwareMap.get(DcMotor.class, "right_back_drive");
-        intake = hardwareMap.get(DcMotor.class, "intake");
-        launcher = hardwareMap.get(DcMotorEx.class, "launcher");
-        windmillServo = hardwareMap.get(CRServo.class, "windmillServo");
+        leftFrontDrive = hardwareMap.get(DcMotor.class, "front_left_drive");
+        rightFrontDrive = hardwareMap.get(DcMotor.class, "front_right_drive");
+        leftBackDrive = hardwareMap.get(DcMotor.class, "back_left_drive");
+        rightBackDrive = hardwareMap.get(DcMotor.class, "back_right_drive");
+        intake = hardwareMap.get(DcMotor.class, "intake_motor");
+        launcher = hardwareMap.get(DcMotorEx.class, "shooter_motor");
+        windmillServo = hardwareMap.get(CRServo.class, "windmill_servo");
         leftIntakeServo = hardwareMap.get(CRServo.class, "left_intake_servo");
         rightIntakeServo = hardwareMap.get(CRServo.class, "right_intake_servo");
 
@@ -158,7 +158,7 @@ public class BioBuzzStarterbotTeleopMecanum extends OpMode {
          * servos work to pull elements into the intake.
          */
         rightIntakeServo.setDirection(DcMotorSimple.Direction.REVERSE);
-        windmillServo.setDirection(DcMotorSimple.Direction.REVERSE);
+        windmillServo.setDirection(DcMotorSimple.Direction.FORWARD);
 
         /*
          * Tell the driver that initialization is complete.
